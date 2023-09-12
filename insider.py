@@ -11,19 +11,19 @@ driver.set_window_size(width, height)
 
 class InsiderTestClass(unittest.TestCase):
 
-    def test_main_page(self):
+    def test_case(self):
         """Insider Main Page Test"""
         driver.get("https://useinsider.com/")
         self.assertIn("Insider", driver.title, "Not Open Main Page")
         driver.find_element(By.LINK_TEXT, "Company").click()
         driver.find_element(By.LINK_TEXT, "Careers").click()
 
-    def test_quality_assurance(self):
+    def test_case1(self):
         """Insider All Job Click Test"""
         driver.get("https://useinsider.com/careers/quality-assurance/")
         driver.find_element(By.LINK_TEXT, "See all QA jobs").click()
 
-    def test_job_list_detail(self):
+    def test_case2(self):
         """Insider Filter Quality Assurance And Istanbul Turkey Test"""
         driver.get("https://useinsider.com/careers/open-positions/?department=qualityassurance")
         time.sleep(2)
